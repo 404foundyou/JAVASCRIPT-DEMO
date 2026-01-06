@@ -21,6 +21,37 @@ document
 .getElementById("highlightFirstCity")
 .addEventListener('click' , function(){
     let citylist = document.getElementById("citiesList");
-    console.log(citylist.firstElementChild);
+    citylist.firstElementChild.classList.add("highlight");
 });
 
+
+//example-3
+document.getElementById("changeOrder")
+.addEventListener('click' , function(){
+    let temp = document.getElementById("coffeeType");
+    temp.textContent = "Espresso";
+    temp.style.backgroundColor = "pink";
+    temp.style.padding = "5px";
+    temp.style.borderRadius = "5px";
+    temp.style.color = "black";
+})
+
+
+//example-4
+document.getElementById("addNewItem")
+.addEventListener('click', function(){
+    let newItem = document.createElement("li");
+    newItem.textContent = "Eggs";
+    document.getElementById("shoppingList").appendChild(newItem);
+})
+
+
+//example-5
+document.getElementById("removeLastTask")
+.addEventListener('click' , function(){
+    let hold = document.getElementById("taskList");
+    hold.lastChild.remove();
+})
+
+    
+        
