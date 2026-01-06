@@ -53,5 +53,62 @@ document.getElementById("removeLastTask")
     hold.lastChild.remove();
 })
 
+//example-6
+document
+.getElementById("clickMeButton")
+.addEventListener('dblclick' , function(){
+    alert("Le Re Lund Ke");
+})
+
+//example-7
+document
+.getElementById("teaList")
+.addEventListener('click',function(event){
+    if(event.target){
+        alert("You Selected : " + event.target.textContent);
+    }
+})
+
+//example-8
+document
+.getElementById("feedbackForm")
+.addEventListener('submit', function(event){
+    event.preventDefault();
+    let feedback  = document.getElementById("feedbackInput").value;
+    document.getElementById("feedbackDisplay").textContent = feedback;
+})
+
+//example-9
+document.addEventListener("DOMContentLoaded", function(){
+    document.getElementById("domStatus").textContent = "DOM FULLY LOADED";
+})
+
+//example-9
+document
+.getElementById("toggleHighlight")
+.addEventListener('click',function(){
+    let hold = document.getElementById("descriptionText");
+    hold.classList.toggle('highlight');
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     
         
